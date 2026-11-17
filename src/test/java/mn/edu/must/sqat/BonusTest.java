@@ -84,4 +84,15 @@ class BonusTest {
         );
     }
 
+    @Test
+    @DisplayName("B09: kill M2 wrong variable 43")
+    void bonusDetectWrongBestUpdate() {
+        int[] attendance = {1, 1, 0, 1, 1, 1};
+
+        assertEquals(
+            5,
+            DataFlowTargets.bonus(attendance, 5)
+        );
+    }
+
 }
